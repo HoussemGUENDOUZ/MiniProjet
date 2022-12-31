@@ -8,7 +8,7 @@ class Blog extends Component{
                     <Link to="PostList" className="mx-3 btn btn-primary">Display posts</Link>
                     <Link to="AddPost" className="mx-3 btn btn-primary">add a new post</Link>
                 </div>
-                <div className="my-4 d-flex justify-content-center">
+                <div className="my-4 ">
                 <Outlet/>
                 </div>
             </div>

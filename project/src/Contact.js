@@ -20,7 +20,7 @@ class Contact extends Component{
                     <Link to="ContactList" className="mx-3 btn btn-primary">Display contacts</Link>
                     <Link to="CreateContact" className="mx-3 btn btn-primary">create a new contact</Link>
                 </div>
-                <div className="my-4 d-flex justify-content-center">
+                <div className="my-4">
                 <Outlet/>
                 </div>
                 

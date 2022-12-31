@@ -8,7 +8,7 @@ class Home extends Component {
           <h2 className='my-5'>I am Mr. Guendouz Houssem</h2>
           <p className='mt-5 mb-2'><strong>Note : </strong>you can browse the page with the links in the navbar</p>
           </div>
-          <img id='person'className='col-6 img-fluid' src = "./imgs/person.png"/>
+          <img id='person'className='col-6 img-fluid' src = "./imgs/person.png" alt=""/>
         </div>
     );
   }
