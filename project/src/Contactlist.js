@@ -5,7 +5,7 @@ class Contactlist extends Component{
     constructor(){
         super();
         this.state = {
-            contacts: contacts,
+            contacts: JSON.parse(localStorage.getItem("contactlist")) === null  ? contacts : JSON.parse(localStorage.getItem("contactlist")),
         }
     }
     mapping(x){

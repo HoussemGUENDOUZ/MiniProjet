@@ -6,7 +6,7 @@ class Postlist extends Component{
     constructor(){
         super();
         this.state = {
-            posts: posts,
+            posts: JSON.parse(localStorage.getItem("postlist")) === null  ? posts : JSON.parse(localStorage.getItem("postlist")),
         }
     }
     mapping(x){

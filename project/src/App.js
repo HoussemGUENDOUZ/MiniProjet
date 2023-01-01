@@ -9,7 +9,9 @@ import Contactform from "./Contactform";
 import Postform from "./Postform";
 import Postlist from "./Postlist";
 class App extends Component{
+    
     render(){
+        
         return(
             <div>
             <Header/>

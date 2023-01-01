@@ -7,6 +7,7 @@ class Post extends Component{
                 <div className="card mb-2">
                     <div className="card-header justify-content-center">
                         <h2>{this.props.subject}</h2>
+                        <i className="fa-regular fa-heart"></i>
                     </div>
                     <div className="card-body">
                         <h5>{this.props.description}</h5>
