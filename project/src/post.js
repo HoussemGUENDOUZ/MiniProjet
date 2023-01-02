@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import Like from "./like";
 class Post extends Component{
     render(){
         return(
@@ -12,6 +12,7 @@ class Post extends Component{
                     <div className="card-body">
                         <h5>{this.props.description}</h5>
                         <div>{this.props.date}</div>
+                         <Like />
                     </div>
                 </div>
             </div>
