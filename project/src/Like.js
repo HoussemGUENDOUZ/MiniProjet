@@ -1,32 +1,30 @@
 import React, { Component } from 'react';
-import  IconContext from 'docs'
-import { AiFillHeart } from 'react-icons/ai';
+//import  IconContext from 'docs'
+//import { AiFillHeart } from 'react-icons/ai';
 class Like extends Component {
-  state = { count: 0 };
+  constructor(){
+    super();
+    this.state = {
+      likeclass : "fa-regular fa-heart text-danger",
+      count:Math.round(Math.random() * 20),
+    }
+  }
   clickHandler = () => {
     let newLike = this.state.count + 1;
- 
-    
     this.setState({
+      likeclass : "fa-solid fa-heart text-danger",
       count: newLike,
-      
     });
+    setTimeout( () => 
+        this.setState({
+            likeclass : "fa-regular fa-heart text-danger" , 
+        }),500);
   };
-
-
-
-  
   render() {
     return (
-
-
       <div>
-        
-          <AiFillHeart className ="red_heart "onClick={this.clickHandler} style={{color:"red"}} />
-          {this.state.count}
-        
+        <i className={this.state.likeclass} onClick={this.clickHandler} > {this.state.count} </i>  
       </div>
-   
     );
   }
 }

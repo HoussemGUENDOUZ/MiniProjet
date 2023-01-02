@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import posts from "./Posts";
+import { posts } from "./Posts";
 function Postform(){
     if(localStorage.getItem("postlist") === null){
         localStorage.setItem("postlist", []);
@@ -33,6 +33,7 @@ function Postform(){
         const newPosts =[...postlist, newPost];
         setPosts(newPosts);
         localStorage.setItem("postlist", JSON.stringify(newPosts));
+        alert("post added successfully!")
       };
     return(
         <div>
@@ -43,18 +44,18 @@ function Postform(){
                 <div class="row my-3">
                     <div class="form-group col-md-6 my-sm-3">
                         <label for="subject" >Subject</label>
-                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Post subject" onChange={handleAddFormChange}/>
+                        <input required type="text" name="subject" class="form-control" id="subject" placeholder="Post subject" onChange={handleAddFormChange}/>
                     </div>
                     <div class="form-group col-md-6 my-sm-3">
                         <label for="description" >Description</label>
-                        <input type="text" name="description" class="form-control" id="description" placeholder="Post description" onChange={handleAddFormChange}/>
+                        <input required type="text" name="description" class="form-control" id="description" placeholder="Post description" onChange={handleAddFormChange}/>
                     </div>
                 </div>
                 <div class="form-group col-md-6 my-3">
                     <label for="date">Date</label>
-                    <input type="date" name="date" class="form-control" id="date" onChange={handleAddFormChange}/>
+                    <input required type="date" name="date" class="form-control" id="date" onChange={handleAddFormChange}/>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Add post</button>
             </form>
         </div>
     )

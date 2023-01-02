@@ -34,6 +34,7 @@ function Contactform(){
         const newContacts =[...contactlist, newContact];
         setContacts(newContacts);
         localStorage.setItem("contactlist", JSON.stringify(newContacts));
+        alert("contact added successfully!");
       };
     return(
         <div>
@@ -44,18 +45,18 @@ function Contactform(){
                 <div className="row my-3">
                     <div className="form-group col-md-6 my-sm-3">
                         <label htmlFor="name" >Name</label>
-                        <input type="text" name="name" className="form-control" id="name" placeholder="Contact name" onChange={handleAddFormChange}/>
+                        <input required type="text" name="name" className="form-control" id="name" placeholder="Contact name" onChange={handleAddFormChange}/>
                     </div>
                     <div className="form-group col-md-6 my-sm-3">
                         <label htmlFor="phone" >Phone number</label>
-                        <input type="text" name="phone" className="form-control" id="phone" placeholder="Contact phone number" onChange={handleAddFormChange}/>
+                        <input required type="text" name="phone" className="form-control" id="phone" placeholder="Contact phone number" onChange={handleAddFormChange}/>
                     </div>
                 </div>
                 <div className="form-group col-md-6 my-3">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" className="form-control" id="email" placeholder="Contact email" onChange={handleAddFormChange}/>
+                    <input required type="email" name="email" className="form-control" id="email" placeholder="Contact email" onChange={handleAddFormChange}/>
                 </div>
-                <button type="submit" className="btn btn-primary">Sign in</button>
+                <button type="submit" className="btn btn-primary">Add contact</button>
             </form>
         </div>
     )

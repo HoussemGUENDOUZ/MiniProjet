@@ -1,5 +1,5 @@
 import React , {Component} from "react";
-import posts from "./Posts";
+import { posts } from "./Posts";
 import Post from "./post";
 
 class Postlist extends Component{
@@ -9,6 +9,7 @@ class Postlist extends Component{
             posts: JSON.parse(localStorage.getItem("postlist")) === null  ? posts : JSON.parse(localStorage.getItem("postlist")),
         }
     }
+    
     mapping(x){
         const List = x.map( post => 
         <Post
@@ -16,6 +17,7 @@ class Postlist extends Component{
             subject={post.subject}
             description={post.description}
             date={post.date}
+            likes={post.likes}
         />);
     return List;
     }
