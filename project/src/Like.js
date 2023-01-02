@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import  IconContext from 'docs'
-//import { AiFillHeart } from 'react-icons/ai';
 class Like extends Component {
   constructor(){
     super();
@@ -18,7 +16,7 @@ class Like extends Component {
     setTimeout( () => 
         this.setState({
             likeclass : "fa-regular fa-heart text-danger" , 
-        }),500);
+        }),1000);
   };
   render() {
     return (
